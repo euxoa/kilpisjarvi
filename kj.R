@@ -100,7 +100,7 @@ fit2 <- sampling(m.k2, data=sdat, iter=20000, init=0, chains=1,
                  nondiag_mass=T, control=list(stepsize_jitter=0.3))
 
 hist(extract(fit2, "k2")[[1]], n=100) # Quadratic trend 
-sum(extract(fit2, "k2")[[1]]<0/10000) # Quadratic trend >0 ?
+sum(extract(fit2, "k2")[[1]]<0)/10000 # Quadratic trend >0 ?
 
 # Just out of curiosity...
 # With the quadratic model, when was the underlying trend likely positive?
